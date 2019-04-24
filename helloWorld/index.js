@@ -102,8 +102,8 @@ let unfifiedServer = (req,res) => {
 let handlers = {};
 
 // sample handler
-handlers.sample = (data, callback) => {
-    callback(406, {'name': 'sample handler'});
+handlers.hello = (data, callback) => {
+    callback(406, {message: 'hello world!'});
 }
 
 // not found handler
@@ -113,5 +113,5 @@ handlers.notFound = (data, callback) => {
 
 // define the request router
 let router = {
-    sample: handlers.sample
+    hello: handlers.hello
 }
